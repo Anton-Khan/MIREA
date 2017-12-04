@@ -1,0 +1,10 @@
+inc
+inc
+inc
+* data = 3;
+print
+begin
+print
+inc
+end
+
