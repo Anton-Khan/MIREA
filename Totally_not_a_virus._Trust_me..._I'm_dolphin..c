@@ -14,28 +14,13 @@ int lsh_cd(char **args);
 int lsh_help(char **args);
 int lsh_exit(char **args);
 
-
-char *builtin_str[] = {
-  "cd",
-  "help",
-  "exit"
-};
-
-
-
-int (*builtin_func[]) (char **) = {
-  &lsh_cd,
-  &lsh_help,
-  &lsh_exit
-};
-
+char *builtin_str[] = {"cd", "help", "exit" };
+int (*builtin_func[]) (char **) = {&lsh_cd, &lsh_help, &lsh_exit };
 
 
 int lsh_num_builtins() {
   return sizeof(builtin_str) / sizeof(char *);
 }
-
-
 
 
 int lsh_cd(char **args)
@@ -61,13 +46,10 @@ return 1;
 
 
 
-
 int lsh_exit(char **args)
 {
   return 0;
 }
-
-
 
 
 
@@ -102,7 +84,6 @@ int lsh_launch(char **args)
 
 
 
-
 int lsh_execute(char **args)
 {
   int i;
@@ -120,8 +101,6 @@ int lsh_execute(char **args)
 
   return lsh_launch(args);
 }
-
-
 
 
 
@@ -165,12 +144,6 @@ char *lsh_read_line(void)
 
 
 
-
-
-
-
-
-
 char **lsh_split_line(char *line)
 {
   int bufsize = LSH_TOK_BUFSIZE, position = 0;
@@ -201,8 +174,6 @@ char **lsh_split_line(char *line)
   tokens[position] = NULL;
   return tokens;
 }
-
-
 
 
 
