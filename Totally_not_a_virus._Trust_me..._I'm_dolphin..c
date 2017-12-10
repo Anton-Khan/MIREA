@@ -38,7 +38,9 @@ int lsh_cd(char **args)
 int lsh_help(char **args)
 {
 
-    printf("This isn't GNU Bash and I'm so lazy, so:\n Type \"info\" for a lot of standard information :] \n");
+    printf("This isn't GNU Bash \nYou can use only commands which are programs and commands->"cd", "help", "exit"\n 
+    printf("I'm so lazy, so:\n Type \"info\" for a lot of standard information :] \n");
+    
 
 return 1;
 }
