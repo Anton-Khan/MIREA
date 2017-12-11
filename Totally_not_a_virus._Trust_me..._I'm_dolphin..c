@@ -38,9 +38,8 @@ int lsh_cd(char **args)
 int lsh_help(char **args)
 {
 
-    printf("This isn't GNU Bash \nYou can use only commands which are programs and commands->\"cd\", \"help\", \"exit\"\n\n");
-    printf("I'm so lazy, so:\n Type \"info\" for a lot of standard information :] \n");
-
+    system("echo \"\033[37;1;41m This isn't GNU Bash \nYou can use only commands which are programs and commands->\"cd\", \"help\", \"exit\"\033[0m\n\n  \" ");
+    system("echo \"\033[41;1;41m I'm so lazy, so:\n Type << info >> for a lot of standard information :] \033[0m\n\n  \" ");
 
 return 1;
 }
@@ -185,7 +184,7 @@ int main(int argc, char **argv)
   char *line;
   char **args;
   int status;
-
+  printf("Type << help  >> for some information :] \n");
   do {
     printf(">>> ");
     line = lsh_read_line();
